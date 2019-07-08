@@ -1,13 +1,20 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 module.exports = {
-    entry: './app.js',
+    entry: './src/client/app.js',
     output: {
         'filename': 'bundle.js',
         'path': path.join(__dirname, 'dist')
     },
-    devtool: "source-map", // any "source-map"-like devtool is possible,
+    devtool: "source-map",
+    devServer: {
+        port: 6300,
+        open: true,
+        proxy: {
+            "/api": "http://localhost:3000"
+        }
+    },    
     module: { 
         rules: [
             {
@@ -50,5 +57,11 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+          template: "./index.html",
+          filename: "./index.html"
+        })
+      ]
 }

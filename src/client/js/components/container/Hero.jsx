@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import '../../../scss/hero.scss'
-import '../../../css/styles.css'
+import '../../../scss/components/hero/hero.scss'
 
 class Hero extends React.Component {
     constructor() {
@@ -28,7 +27,7 @@ class Hero extends React.Component {
     }
     render() {
         return (
-            <div className="test">
+            <div className="hero">
                 <h1>Hero Component</h1>
             </div>
         );
