@@ -22,7 +22,7 @@ class Hero extends React.Component {
                     "name": "bazz",
                     "age": 40
                 }
-            ]
+            ],            
         }
     }
     render() {

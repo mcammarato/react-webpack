@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Hero from './js/components/container/Hero.jsx'
+import App from './js/components/container/App.jsx';
 
-ReactDOM.render(<Hero />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'));
 
